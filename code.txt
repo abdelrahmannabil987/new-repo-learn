@@ -3,6 +3,7 @@ docker ps
 docker exec -it kafka1 bash
 
 cd /opt/kafka/bin
+next
 
 ./kafka-topics.sh --bootstrap-server kafka1:19092,kafka2:19092,kafka3:19092 --create --topic test-topic --partitions 3 --replication-factor 3 --config min.insync.replicas=2
 
